@@ -11,7 +11,7 @@ export class QuizEndComponent implements OnInit {
     points:number;
     badNumber:boolean = true;
 
-    constructor(private quizService:QuizService, private router:Router){}
+    constructor(private quizService:QuizService){}
 
     ngOnInit(){
         this.points = this.quizService.getPoints()
@@ -19,7 +19,6 @@ export class QuizEndComponent implements OnInit {
     }
 
     startQuizAgain(){
-        location.reload();
-        this.router.navigate(['/Quiz/'])
+        window.location.reload();
     }
 }
