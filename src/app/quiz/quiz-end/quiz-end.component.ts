@@ -20,6 +20,6 @@ export class QuizEndComponent implements OnInit {
 
     startQuizAgain(){
         location.reload();
-        this.router.navigate(['https://pushay.github.io/Quiz/'])
+        this.router.navigate(['/Quiz/'])
     }
 }
