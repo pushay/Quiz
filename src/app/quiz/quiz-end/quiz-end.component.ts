@@ -19,6 +19,6 @@ export class QuizEndComponent implements OnInit {
     }
 
     startQuizAgain(){
-        window.location.href = '/';
+        window.location.href = '/Quiz';
     }
 }
