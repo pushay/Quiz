@@ -1,0 +1,13 @@
+.answears-field {
+    @include flex(flex,null, space-between, null);
+    width: 600px;
+
+}
+
+@media(max-width:720px){
+   .answears-field {
+    @include flex(flex,column, space-between, center);
+    height: 170px;
+    width: 300px;
+   }
+}

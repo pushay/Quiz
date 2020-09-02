@@ -1,0 +1,67 @@
+@-webkit-keyframes button-push {
+    50% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @keyframes button-push {
+    50% {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+.button {
+  @include style(inherit, inherit, none, 60px, 0.5rem 2.5rem, 2px 2px 5px $box-shadow);
+    background-color: $whitey-color;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    cursor: pointer;
+    font-size: 1.1rem;
+
+    &:hover,  &:active {
+        -webkit-animation-name: button-push;
+        animation-name: button-push;
+        -webkit-animation-duration: 0.2s;
+        animation-duration: 0.2s;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+}
+    &:focus {
+        outline:none;
+    }
+
+    &:disabled {
+      color: black;
+      animation-play-state: paused;
+    }
+
+
+}
+
+@media(max-width:1050px){
+  .button {
+    font-size: 0.95rem;
+  }
+}
+
+@media(max-width:720px){
+  .button {
+    @include style(inherit, inherit, none, 60px, 0.4rem 2.5rem, 2px 2px 5px $box-shadow);
+    font-size: 0.9rem;
+  }
+}
+

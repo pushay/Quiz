@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import './SCSS/abstracts/_abstracts';
+@import './SCSS/base/_base';
+@import './SCSS/layout/_header.scss';
+@import './SCSS/components/_start-button.scss';
+@import './SCSS/components/_button.scss';
+@import './SCSS/pages/_quiz.scss';
+@import './SCSS/pages/_start';
+@import './SCSS/components/_quiz-image.scss';
+@import './SCSS/components/_quiz-field.scss';
+@import './SCSS/components/_quiz-field-question.scss';
+@import './SCSS/components/_quiz-field-answears.scss';
+@import './SCSS/components/_quiz-end.scss';

@@ -1,0 +1,14 @@
+.container {
+    background-image:url(./assets/agra.jpg);
+    background-size: 2100px 1040px;
+    background-position: center;
+    background-repeat:no-repeat;
+    height: 1020px;
+}
+
+@media(max-width:720px){
+    .container {
+        height:950px;
+        background-size: 1500px 1040px;
+    }
+}
