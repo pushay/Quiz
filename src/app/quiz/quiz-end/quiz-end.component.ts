@@ -1,5 +1,6 @@
 import { Component, OnInit} from "@angular/core";
 import { QuizService } from 'src/app/shared/quiz.service';
+import {Router} from "@angular/router";
 
 @Component({
     selector:'app-quiz-end',
@@ -10,7 +11,7 @@ export class QuizEndComponent implements OnInit {
     points:number;
     badNumber:boolean = true;
 
-    constructor(private quizService:QuizService){}
+    constructor(private quizService:QuizService, private router:Router){}
 
     ngOnInit(){
         this.points = this.quizService.getPoints()
@@ -19,6 +20,6 @@ export class QuizEndComponent implements OnInit {
 
     startQuizAgain(){
         location.reload();
-        return false;
+        this.router.navigate(['https://pushay.github.io/Quiz/'])
     }
 }
